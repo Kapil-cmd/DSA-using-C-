@@ -4,22 +4,17 @@ class Program
     static void Main(string[] args)
     {
         int size = 10;
-        Stack stack = new Stack(size);
+        Queue queue = new Queue(size);
+        queue.Enqueue(1);
+        queue.Enqueue(2);
+        queue.Enqueue(3);
+        queue.Enqueue(4);
+        queue.Enqueue(5);
 
-        for (int i = 0; i < 3; i++)
-        {
-            stack.Push("Ronaldo");
-            stack.Push("Bale");
-            stack.Push("Benzema");
-        }
-        stack.Pop();
-        stack.Peek();
-        while (!stack.isEmpty())
-        {
-            var value = stack.Pop();
-            Console.WriteLine(value);
-        }
+        queue.Dequeue();
+        queue.Dequeue();
 
+        queue.Peek();
     }
 
 }
