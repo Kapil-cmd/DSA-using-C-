@@ -3,9 +3,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        int[] array = { 1, 2, 3, 4, 5, 6, 7, 8 };
-        BinarySearch search = new BinarySearch(array,7);
-        search.Search(array, 7);
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.Insert(10, "Messi");
+        tree.Insert(7, "Ronaldo");
+        tree.Insert(11, "Neymar");
+        tree.Insert(4, "Ramos");
+        Console.WriteLine(tree.Find(7));
     }
 
 }
